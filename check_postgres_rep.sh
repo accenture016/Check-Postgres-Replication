@@ -7,9 +7,9 @@
 
 # Original writer and ideator: jmorano
 # Rewritten by Fabio Pardi
-# Edited by C@rlo S@cchi
+# Edited by CSacchi
 # Version: August 2019
-# Codename: carlos
+# Codename: CSacchi
 
 # Nagios standard exit codes
 STATE_OK=0
