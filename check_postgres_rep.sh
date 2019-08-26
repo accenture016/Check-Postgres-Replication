@@ -7,7 +7,7 @@
 
 # Original writer and ideator: jmorano
 # Rewritten by Fabio Pardi
-# Edited bu Carlo Sacchi
+# Edited by C@rlo S@cchi
 # Version: August 2019
 # Codename: carlos
 
