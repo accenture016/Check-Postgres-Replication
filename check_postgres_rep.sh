@@ -27,7 +27,6 @@ p_port=$5
 db_user=$6
 db_p_user=$7
 
-
 ## Limits are in bytes
 # 1 WAL file is 16MB = 16777216 bytes
 
@@ -59,10 +58,11 @@ then
 fi
 
 # End of checks
+export PGPASSWORD=$db_p_user
 
-replay_lag=$(psql -U $db_user -p $db_p_user -h$s_host -p$s_port -A -t -c "SELECT pg_xlog_location_diff(pg_last_xlog_replay_location(), '0/0')" $p_db )  || exit $STATE_CRITICAL   # Replay
-slave_lag=$(psql -U $db_user -p $db_p_user -h$s_host -p$s_port -A -t -c "SELECT pg_xlog_location_diff(pg_last_xlog_receive_location(), '0/0')" $p_db)  || exit $STATE_CRITICAL   # Receive
-master_lag=$(psql -U $db_user -p $db_p_user -h$p_host -p$p_port -A -t -c "SELECT pg_xlog_location_diff(pg_current_xlog_location(), '0/0')" $p_db     )  || exit $STATE_CRITICAL   # Offset
+replay_lag=$(psql -U $db_user -p$db_p_user -h$s_host -p$s_port -A -t -c "SELECT pg_xlog_location_diff(pg_last_xlog_replay_location(), '0/0')" $p_db )  || exit $STATE_CRITICAL   # Replay
+slave_lag=$(psql -U $db_user -p$db_p_user -h$s_host -p$s_port -A -t -c "SELECT pg_xlog_location_diff(pg_last_xlog_receive_location(), '0/0')" $p_db)  || exit $STATE_CRITICAL   # Receive
+master_lag=$(psql -U $db_user -p$db_p_user -h$p_host -p$p_port -A -t -c "SELECT pg_xlog_location_diff(pg_current_xlog_location(), '0/0')" $p_db )  || exit $STATE_CRITICAL   # Offset
 
 # There are cases in which the connection and query are OK but nothing is returend. Eg: the wrong server is queried 
 if [ -z $replay_lag ]
