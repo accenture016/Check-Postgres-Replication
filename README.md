@@ -1,9 +1,12 @@
-# check_postgres_replication
+# Check Postgres Replication
+
 Script to check postgres replication
+
+Tested on PostrgreSQL 9.5
 
 Original by https://exchange.nagios.org/directory/Plugins/Databases/PostgresQL/Check-postgres-replication/details
 
-Edited adding password as variable
+Edited by adding password as variable parameter on CLI ./myscript parameter1 parameter2... password
 
 HOW TO USE:
 
