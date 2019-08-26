@@ -39,9 +39,9 @@ if [ -z $s_host ] || [ -z $s_port ] || [ -z $p_db ] || [ -z $p_host ] || [ -z $p
 then
     echo "Error: not all parameters are set!"
     echo 
-    echo "Please use $0 standby_host standby_port db_name primary_host primary_port user"
+    echo "Please use $0 standby_host standby_port db_name primary_host primary_port user password_user"
     echo 
-    echo "Eg: $0 10.10.10.2 5432 mydb 10.10.10.3 5432 myuser"
+    echo "Eg: $0 10.10.10.2 5432 mydb 10.10.10.3 5432 my_user my_password_user"
     exit 2
 fi
 
