@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # $Id: check_slave_replication.sh 3421 2013-08-09 07:52:44Z jmorano
-# How Replication works:
 
+# How Replication works:
 # Master ->>>> streaming to ->>>> Standby -->> replay ->>> write to Standby disk
 
 # Original writer and ideator: jmorano
 # Rewritten by Fabio Pardi
 # Edited by C.Sacchi / Co Accenture
-# Version: August 2019
+# Version: 1.0.0 - August 2019
 # Codename: CSacchi
 
 # Nagios standard exit codes
