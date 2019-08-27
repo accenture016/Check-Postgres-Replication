@@ -2,7 +2,12 @@
 
 Script to check postgres replication
 
+![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![Buils](https://img.shields.io/badge/build-stable-green.svg)
+
 Tested on PostrgreSQL 9.5
+
+<img src="https://www.postgresql.org/media/img/about/press/elephant.png" width="50" height="50">
 
 Original by https://exchange.nagios.org/directory/Plugins/Databases/PostgresQL/Check-postgres-replication/details
 
@@ -15,3 +20,6 @@ The script needs  bc (Basic Calculator) (yum install bc -y)
 Set Permissions xr permission (chmod 700 check_postgres_rep.sh, 555 etc..)
 
 ./check_postgres_rep.sh ip_host_slave slave_port db_postgres ip_master port_master user password
+
+
+
