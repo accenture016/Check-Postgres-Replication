@@ -4,7 +4,7 @@ Script to check postgres replication
 
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 ![Buils](https://img.shields.io/badge/build-stable-green.svg)
-![GitHub file size in bytes](https://img.shields.io/github/size/accenture016/Check-Postgres-Replication/check_postgres_rep.sh)
+![GitHub file size in bytes](https://img.shields.io/github/size/accenture016/Check-Postgres-Replication/Check_Postgres_Replication.sh)
 
 Tested on PostrgreSQL 9.5
 
